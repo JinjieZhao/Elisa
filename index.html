@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta charset="UTF-8">
+    <title>Te Amo</title>
+    <link rel="stylesheet" type="text/css" href="./css/format.css">
+</head>
+
+<body style="margin:0px">
+<audio id="bgm" loop>
+    <source preload="preload" src="music/hand.mp3" type="audio/mpeg">
+    Your browser does not support the audio.
+</audio>
+<canvas></canvas>
+<div id="imgTxt">
+    <span id="Txt"></span> <br/>
+    <span id="tmp"></span>
+    <img id="img" src="">
+</div>
+<div id="heartTxt">
+    <span id="clickMe">Te Amo</span>
+    <div id="heart">
+        <button id="button" onclick="play()"></button>
+    </div>
+</div>
+<div id="content">
+    <h2 id="together">我们已经相遇</h2>
+    <div id="timer">
+        <b id="d"></b> Days
+        <b id="h"></b> Hours
+        <b id="m"></b> Minutes
+        <b id="s"></b> Seconds
+    </div>
+</div>
+
+<div id="typeDiv">
+    <span id="txt1"></span> <br/>
+    <span id="txt2"></span>
+</div>
+
+<script>
+    var ok = 0;
+    var flag = 1;
+    var myImage = document.getElementById("img");
+    var myTxt = document.getElementById("Txt");
+    var imageArray = ["pic/img1.png", "pic/img2.jpg", "pic/img3.jpg", "pic/img4.jpg", "pic/img5.jpg", "pic/img6.jpg",
+        "pic/img7.jpg", "pic/img8.jpg", "pic/img9.jpg", "pic/img10.png", "pic/img11.jpg"];
+    var imageIndex = 0;
+    var txtArray = ["从现金流的懵懂相遇", "到文体两开花的美术馆+射箭", "我们一起做手机壳",
+        "把他放到相框里", "我们还携手做了早日退休的蛋糕", "然后我们去潮汕给牛肉火锅读秒", "后面 我去龙南遇到了可爱的女朋友",
+        "遇到了文艺的女朋友", "遇到了一起练车的女朋友", "遇到了练习扳手腕的女朋友", "最后的最后 La vista más bella es aquella que comparto contigo"];
+    var len = imageArray.length;
+    var t = 0;
+</script>
+
+<script type="text/javascript" src="./js/stars.js"></script>
+<script type="text/javascript" src="./js/typeWriter.js"></script>
+<script type="text/javascript" src="./js/date.js"></script>
+<script type="text/javascript" src="./js/playImg.js"></script>
+</body>
+</html>

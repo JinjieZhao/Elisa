@@ -40,6 +40,22 @@
 </div>
 
 <script>
+    var controlImgLoad = (arr = [], callBack) => {
+        arr.forEach((v, idx, arr) => {
+            let img = new Image();
+            img.src = v;
+            img.onload = () => {
+                arr.successLength = (arr.successLength || 0) + 1;
+
+                console.log(arr.successLength , arr.length)
+                if ((arr.successLength / arr.length) >= 1) {
+                    //结束骨架渲染
+                    callBack && callBack()
+                }
+            }
+        })
+    }
+
     var ok = 0;
     var flag = 1;
     var myImage = document.getElementById("img");
@@ -52,6 +68,8 @@
         "遇到了文艺的女朋友", "遇到了一起练车的女朋友", "遇到了练习扳手腕的女朋友", "最后的最后 La vista más bella es aquella que comparto contigo"];
     var len = imageArray.length;
     var t = 0;
+    //
+    // controlImgLoad(imageArray)
 </script>
 
 <script type="text/javascript" src="./js/stars.js"></script>

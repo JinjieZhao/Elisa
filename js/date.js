@@ -4,6 +4,8 @@ var val = 0;
 
 function timer() {
     var start = new Date(2022, 3, 30, 15, 0);
+    /* eslint-disable */
+
     var t = new Date() - start;
     var d = Math.floor(t / 1000 / 60 / 60 / 24);
     var h = Math.floor(t / 1000 / 60 / 60 % 24);
@@ -30,7 +32,7 @@ function fadein() {
         dv.style.opacity = val;
     } else {
         clearInterval(fadeinInterval);
-        if (ok == 2) {
+        if (ok === 2) {
             ok += 1;
         }
     }
@@ -42,7 +44,7 @@ var fadeinInterval;
 timer();
 setInterval(timer, 1000);
 fadeInterval = setInterval(function () {
-    if (ok == 2) {
+    if (ok === 2) {
         clearInterval(fadeInterval);
         fadeinInterval = setInterval(fadein, 50);
     }

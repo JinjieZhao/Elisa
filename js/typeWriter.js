@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 let i = 0;
 let text1 = "Hey! Elisa.";
 let text2 = "不知不觉 时光已经过了那么久"

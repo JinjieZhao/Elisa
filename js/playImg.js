@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 var btn = document.getElementById("heartTxt");
 btn.style.opacity = 0;
 var btnVal = 0;
@@ -75,4 +77,4 @@ var showImageInterval;
 var imgInterval;
 var buttonInterval;
 
-event();
+//event();
